@@ -1,3 +1,5 @@
+In the process of making this web application I have used Java Programming Language, Spring Boot, Angular, HTML, CSS, PostgreSQL and Postman for testing.
+
 ![1 about us](https://github.com/DenisVoinescu/GymHub/assets/126812746/bb443777-0e3a-450d-84dc-d1a069084612)
 
 Let's create a new member using our 'Admin' dropdown quick link
@@ -28,7 +30,7 @@ Let's actually update the membership of Denis since he payed for 2 months in adv
 
 Nice
 
-![18 add items for shop](https://github.com/DenisVoinescu/GymHub/assets/126812746/176e2d3a-6e7d-41b5-807b-9f023aecafae)
+![10 60 days memb denis](https://github.com/DenisVoinescu/GymHub/assets/126812746/0ed60718-b67b-4df6-98d0-2dd6ce46b9d9)
 
 Looks like Roi's membership expired and he relocated to another country, so let's delete him from our database
 
