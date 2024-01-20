@@ -115,3 +115,5 @@ Looks like it decremented!
 And our total revenue increased!
 
 ![34 total revenue updated](https://github.com/DenisVoinescu/GymHub/assets/126812746/ff58941a-df38-41c7-8744-5e465d14929e)
+
+in the future I want to implement functionalities based on user roles, like adding balance to your account, extending your membership by yourself if you have enough balance, buy items from  the shop and many more
