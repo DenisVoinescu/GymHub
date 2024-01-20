@@ -1,0 +1,26 @@
+
+.dropdown-item:hover {
+  background-color: #3d3761;
+  color: white;
+  cursor: pointer;
+}
+
+.dropdown-item:focus, .dropdown-item.active {
+  background-color: #3d3761;
+  color: white;
+}
+
+
+#my-account-btn{
+  margin-left: 5px;
+  background-color: #3d3761;
+  color:  white;
+}
+
+#control-panel{
+  border-top: 2px solid black;
+}
+.dropdown-item{
+  cursor: pointer;
+}
+

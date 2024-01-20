@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Manage authorities</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-15 mt-3">
+      <h1>Authority list</h1>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Username</th>
+          <th>Role</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let tempAuthority of authorities">
+          <td>{{ tempAuthority.id }}</td>
+          <td>{{ tempAuthority.username}}</td>
+          <td>{{ tempAuthority.role}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="buttons-div">
+        <a routerLink="create" class="btn btn-success">Create authority</a>
+        <a routerLink="delete" class="btn btn-danger">Delete authority</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+</body>
+</html>
+<router-outlet></router-outlet>

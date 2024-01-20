@@ -1,0 +1,25 @@
+table {
+  width: 900px;
+  display: block;
+  margin:2% auto 0 auto;
+  overflow-y: scroll;
+  border: 1px solid black;
+  height:400px;
+}
+
+th{
+  width: 200px;
+}
+td{
+  width: 320px;
+}
+h1{
+  text-align: center;
+}
+.buttons-div{
+  margin: 40px auto 0 auto;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}

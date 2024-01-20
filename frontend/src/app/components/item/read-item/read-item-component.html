@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+  <title>Manage items</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 mt-3">
+      <h1>Item list</h1>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Id</th>
+          <th>Category</th>
+          <th>Image url</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let tempItem of items">
+          <td>{{ tempItem.id }}</td>
+          <td>{{ tempItem.category}}</td>
+          <td>{{ tempItem.imageUrl}}</td>
+          <td>{{ tempItem.name}}</td>
+          <td>{{ tempItem.description}}</td>
+          <td>{{ tempItem.price | currency}} </td>
+          <td>
+            <a [routerLink]="['stock', tempItem.id]" class="btn btn-primary">
+              Manage stock
+            </a>
+          </td>
+
+
+
+        </tbody>
+
+      </table>
+      <div class="buttons-div">
+        <a routerLink="create" class="btn btn-success" >Add item</a>
+        <a routerLink="update" class="btn btn-primary">Update item</a>
+        <a routerLink="delete" class="btn btn-danger">Delete item</a>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+</body>
+</html>
+<router-outlet></router-outlet>

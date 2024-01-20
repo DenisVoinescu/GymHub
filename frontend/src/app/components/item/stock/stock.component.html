@@ -1,0 +1,83 @@
+<!-- stock.component.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rnDRyrhh4LNh4e8rL3oVMWSktQOp6k/a6QscY95OQqNACtDOj4kePkJ5EMMKxBVR" crossorigin="anonymous">
+  <title>Manage Stocks</title>
+</head>
+<body>
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center mb-4">Stock for item {{ itemId }}</h1>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Size</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let stock of stocks">
+          <td>{{ stock.sizeName }}</td>
+          <td>{{ stock.quantity }}</td>
+          <td>
+            <div class="btn-group" role="group">
+              <button  class="btn btn-primary" data-bs-toggle="dropdown" style="border-radius: 8% !important;"  aria-expanded="false">
+                Update
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <label for="updateQuantity">New Quantity:</label>
+                  <input type="number" id="updateQuantity" [(ngModel)]="updateQuantity" />
+                  <button class="btn btn-primary" (click)="updateStock(stock)">Submit</button>
+                </li>
+              </ul>
+            </div>
+
+            <button class="btn btn-danger" style="margin-left: 2%" (click)="deleteStock(stock)">Delete</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+
+      <div class="dropdown">
+        <button class="btn btn-success" type="button" style="margin-bottom: 30%;" data-bs-toggle="dropdown" aria-expanded="false">
+          Add New Stock
+        </button>
+        <ul class="dropdown-menu">
+          <li>
+            <form (ngSubmit)="addNewStock()" #newStockForm="ngForm">
+              <div class="form-group">
+                <label for="newSize" style="margin-left: 40%">Size:</label>
+                <select id="newSize" class="form-control" [(ngModel)]="newSize" name="newSize" required>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="2XL">2XL</option>
+                  <option value="3XL">3XL</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="newQuantity" style="margin-left: 30%">Quantity:</label>
+                <input type="number" id="newQuantity" [(ngModel)]="newQuantity" name="newQuantity" class="form-control" required />
+              </div>
+              <button type="submit" class="btn btn-success" style="padding: 2%; margin: 5% 30%">Submit</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

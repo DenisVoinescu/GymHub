@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Shop</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+<section class="py-5">
+  <div class="container px-4 px-lg-5 mt-5">
+    <div class="filter-container" style="margin-bottom: 30px">
+      <h1 style="margin-bottom: 0; text-align: center" >Shop</h1>
+
+      <label for="categoryFilter" style="width: 30%; text-align: center">Filter by category:</label>
+      <select class="form-control" id="categoryFilter" style="width: 30%; text-align: center" [(ngModel)]="selectedCategory" (change)="onCategoryChange()">
+        <option value="" style="width: 30%; text-align: center">All categories</option>
+        <option *ngFor="let category of categories">{{ category }}</option>
+      </select>
+    </div>
+    <div class="row gx-4 gx-lg-5 row-cols-1 row-cols-md-2 row-cols-xl-4 justify-content-start">
+      <ng-container *ngFor="let group of groupedItems">
+        <div class="col mb-5" *ngFor="let item of group.items">
+
+          <div *ngIf="selectedItemSizes[item.id] && selectedItemSizes[item.id].length > 0">
+            <div class="card h-100">
+              <img class="card-img-top" [src]="item.imageUrl" alt="{{ item.name }}" />
+              <div class="card-body p-4">
+                <div class="text-center">
+                  <h5 class="fw-bolder">{{ item.name }}</h5>
+                  {{item.description}}
+                  <br>
+                  <br>
+                  {{ item.price | currency:'USD':'symbol' }}
+                </div>
+              </div>
+              <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                <div class="text-center">
+                  <label for="sizeSelect{{ item.id }}" style="margin-right: 10px;">Select size</label>
+                  <select [(ngModel)]="selectedItemSize" class="item-details" style="width: 45px; margin:20px 0;">
+                    <ng-container *ngFor="let size of selectedItemSizes[item.id]">
+                      <option [value]="size" *ngIf="availableSizes.includes(size)" [selected]="size === availableSizes[0]">
+                        {{ size }}
+                      </option>
+                    </ng-container>
+                  </select>
+                  <button class="btn btn-outline-dark mt-auto" (click)="sellItem(item.id)">Sell item now</button>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

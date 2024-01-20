@@ -1,0 +1,15 @@
+<div class="col-md-6 offset-md-3">
+  <h1> Add new member </h1>
+  <form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class ="form-control" id = "username"
+             [(ngModel)] = "user.username" name = "username">
+    </div>
+
+
+    <button class = "btn btn-success" style="margin-top: 2%" type ="submit">Create</button>
+
+  </form>
+</div>

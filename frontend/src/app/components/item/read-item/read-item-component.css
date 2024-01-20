@@ -1,0 +1,50 @@
+
+tr button{
+  border-radius: 8px;
+  font-size: 95%;
+  margin: 0;
+  width: 200px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: white;
+  height: auto;
+  background-color: #3d3761
+}
+table {
+  width: 1200px;
+  display: block;
+  margin:2% auto 0 auto;
+  overflow-y: scroll;
+  border: 1px solid black;
+  height:400px;
+}
+
+th{
+  width: 200px;
+}
+td{
+  width: 320px;
+}
+h1{
+  text-align: center;
+}
+.buttons-div{
+  margin: 40px auto 0 auto;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+tr button{
+  border-radius: 8px;
+  font-size: 95%;
+  margin: 0;
+  width: 200px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: white;
+  height: auto;
+  background-color: #3d3761
+}
+
+

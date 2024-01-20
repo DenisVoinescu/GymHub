@@ -1,0 +1,36 @@
+/* stock.component.css */
+
+/* Center the table */
+table {
+  margin: 0 auto;
+  width: 30%; /* Adjust the width as needed */
+  border: 1px solid black;
+}
+
+/* Add spacing between buttons */
+.b {
+  margin-left: 10%; /* Adjust the spacing as needed */
+}
+
+/* Center the "Stocks for Item" heading */
+h2 {
+  text-align: center;
+}
+
+/* Center the "Add New Stock" dropdown */
+.dropdown {
+  text-align: right;
+}
+
+/* Align the dropdown to the bottom-right corner of the table */
+.dropdown {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+.add-new-stock-div{
+  text-align: center;
+  margin: 0 auto;
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h1>Control panel</h1>
+<table>
+<tbody>
+
+<tr>
+  <td>Number of members: {{numOfUsers | async}}</td>
+  <td><a routerLink="user/read" id="manageUsers" class="btn btn-primary">Manage users</a></td>
+</tr>
+<tr>
+  <td>Number of admins: {{numOfAdmins}}</td>
+  <td><a routerLink="authority/read" class="btn btn-primary">Manage authorities</a></td>
+</tr>
+<tr>
+  <td>Items for sale now: {{ numOfItems}}</td>
+  <td><a routerLink="item/read" class="btn btn-primary">Manage items</a></td>
+</tr>
+<tr>
+  <td>Total revenue:   {{ UserService.getTotalRevenue() | currency}}</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
+
+

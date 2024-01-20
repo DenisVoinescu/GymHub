@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import 'bootstrap/dist/css/bootstrap.css';
+body {
+  font-family: 'Poppins', sans serif;
+
+}
+.button {
+  border-radius: 8px;
+  color: white;
+  background-color: #3d3761;
+  font-size: 16px;
+  padding: 15px;
+  text-decoration: none;
+  border: 2px solid black;
+}

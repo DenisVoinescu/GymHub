@@ -1,0 +1,11 @@
+div{
+  margin: 0 auto;
+  width: 400px
+}
+h1{
+  margin: 60px auto;
+  font-size: 40px;
+}
+input {
+  margin-bottom: 20px;
+}

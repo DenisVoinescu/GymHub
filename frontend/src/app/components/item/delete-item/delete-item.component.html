@@ -1,0 +1,10 @@
+<div class="col-md-6 offset-md-3">
+  <h1>Delete item</h1>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Id</label>
+      <input type="number" [(ngModel)]="item.id" name="itemId" required class="form-control">
+    </div>
+    <button class="btn btn-danger" type="submit">Delete</button>
+  </form>
+</div>
