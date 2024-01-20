@@ -91,5 +91,25 @@ Added some joggers too, let's filter by category
 
 ![27 filtered by joggers](https://github.com/DenisVoinescu/GymHub/assets/126812746/4f9370e9-fee0-458b-ae5e-ead14bb99f0a)
 
+![28 filtered by tops](https://github.com/DenisVoinescu/GymHub/assets/126812746/33b2a374-553b-4b45-9d79-0fb465618fa1)
 
+Let's add some stock to the grey joggers: 
 
+![29 stock for grey pants](https://github.com/DenisVoinescu/GymHub/assets/126812746/56cca8b1-dc8d-416b-9db8-143fce3fb468)
+
+And now let's make a sell for a pair of size S grey joggers
+
+![30 lets sell size S for grey pants](https://github.com/DenisVoinescu/GymHub/assets/126812746/3b1d2fb9-71c9-4799-8bf6-4fe71d759bc8)
+
+![31 confirmation](https://github.com/DenisVoinescu/GymHub/assets/126812746/ea349339-1338-406c-85d4-d1602740b692)
+![32 new quantity](https://github.com/DenisVoinescu/GymHub/assets/126812746/c0c4f2f1-1911-41ef-aa70-8a76ebf0120e)
+
+Let's check if the quantity in the stock of grey joggers updated: 
+
+![33 looks like stock for size s is updated](https://github.com/DenisVoinescu/GymHub/assets/126812746/7e88928c-1512-4ef6-97eb-5d81a6c0dc24)
+
+Looks like it decremented!
+
+And our total revenue increased!
+
+![34 total revenue updated](https://github.com/DenisVoinescu/GymHub/assets/126812746/ff58941a-df38-41c7-8744-5e465d14929e)
